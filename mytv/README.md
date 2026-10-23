@@ -48,6 +48,8 @@ Play 스토어와 Play 서비스, 직접 설치한 앱(쿠팡플레이, MX Playe
 - 리모컨: 톱니바퀴(83) → 설정 패널, YouTube(190), Netflix(4062) → 각 앱 (키 도우미 `HomeKeyService`)
 - 화면보호기: 런처 시계(`com.gathin.tvhome/.ClockDream`)
 
+**배경화면**: 오로라 사진 테마 [`theme-aurora`](theme-aurora/config.json) (아래 "독 순서, 아이콘, 배경화면 바꾸기" 참고).
+
 **비공개 DNS**: `dns.adguard-dns.com` (광고·추적 도메인 차단, YouTube 광고는 못 막음).
 
 재부팅 후에도 꺼진 앱이 다시 켜지지 않는 것을 확인했습니다.
@@ -106,6 +108,23 @@ TV_HOST=<tv ip> tools/theme.sh themes/aurora
 TV_HOST=<tv ip> tools/theme.sh --reset    # 테마 지우고 config.xml로 돌아가기
 ```
 
+### 지금 쓰는 테마: `mytv/theme-aurora`
+
+오로라 사진 배경입니다. [`config.json`](theme-aurora/config.json)은 레포의 `themes/aurora`와 같고,
+`wallpaper_true_color`만 더했습니다. 이 설정이 없으면 배경을 16비트 색으로 그려서 어두운 하늘에 띠가
+생깁니다(이 TV는 RAM 약 2.4 GB라 32비트로 그려도 됩니다).
+
+`wallpaper.jpg`는 저작권 때문에 **커밋하지 않고 이 Mac에만** 둡니다(`.git/info/exclude`). 다른 컴퓨터에서
+클론하면 사진이 없으니, 사진을 다시 넣고 보내야 합니다.
+
+- 사진 만들기: 원본을 가로 1920으로 줄인 뒤 **위쪽 1080줄만** 남깁니다(아래만 잘라냄). JPEG 품질 90 안팎,
+  1920×1080. 해상도는 최대 4K까지 받지만 화면은 1920×1080으로 그려지므로 그 이상은 이득이 없습니다.
+- 적용: `TV_HOST=<tv ip> tools/theme.sh mytv/theme-aurora`
+- 포커스된 앱 색이 배경에 번지는 효과를 끄려면 `config.json`에 `"ambient_glow": false`를 넣습니다.
+
+테마를 보내면 런처 설정에서 TV로 바꾼 값(칸 수, 애니메이션)은 초기화됩니다. 키 도우미는 `theme.sh`가
+다시 켜 줍니다.
+
 ## 키 도우미와 볼륨
 
 톱니바퀴·YouTube·Netflix 버튼은 원래 Google TV 홈이 처리했습니다. 그 홈을 껐기 때문에 런처의 키 도우미
@@ -135,7 +154,8 @@ TV_HOST=<tv ip> mytv/restore-all.sh
 ```
 
 키 도우미를 끄고, 묶음 7 → 1 순서로 `tools/restore.sh`를 실행해 꺼둔 앱과 Google TV 홈을 되살리고,
-화면보호기와 DNS를 원래 값으로 돌립니다. 런처 앱은 설치된 채로 남습니다.
+화면보호기와 DNS를 원래 값으로 돌립니다. 런처 앱은 설치된 채로 남습니다. 런처를 계속 쓰면서 배경 테마만
+지우려면 `TV_HOST=<tv ip> tools/theme.sh --reset`을 씁니다.
 
 `tools/restore.sh`는 `~/.cleanyourtv/`에 저장된 기록(끄기 전 상태)을 씁니다. 이 기록은 TV 주소별로
 저장되므로, TV 주소가 바뀌면 기록을 못 찾고 "목록 전체 다시 켜기"로 대신합니다. 이 TV는 처음부터 꺼진
