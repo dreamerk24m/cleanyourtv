@@ -1,0 +1,5 @@
+# TCL 55C755 (Korea), G08_4K_GB, tcl9618, Google TV 14, UTT2.250416.001 AU02. Based on examples/tcl-c755-google-tv.
+# Apply: TV_HOST=<tv ip> tools/disable.sh mytv/batch-6.txt   Undo: TV_HOST=<tv ip> tools/restore.sh mytv/batch-6.txt com.google.android.apps.tv.launcherx
+# Batch 6: Google TV setup wizard. With launcherx gone its RecoveryActivity claims HOME (blank screen).
+# Saved Wi-Fi belongs to android.uid.system on this unit, not to setupwraith.
+com.google.android.tungsten.setupwraith

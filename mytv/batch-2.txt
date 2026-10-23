@@ -1,0 +1,9 @@
+# TCL 55C755 (Korea), G08_4K_GB, tcl9618, Google TV 14, UTT2.250416.001 AU02. Based on examples/tcl-c755-google-tv.
+# Apply: TV_HOST=<tv ip> tools/disable.sh mytv/batch-2.txt   Undo: TV_HOST=<tv ip> tools/restore.sh mytv/batch-2.txt com.google.android.apps.tv.launcherx
+# Batch 2: TCL content, ads and promos
+com.tcl.channelplus                    # TCL Channel+ FAST channels
+com.tcl.tv.tclhome_passive             # pushes TCL content to the home screen at boot
+com.tcl.partnercustomizer              # TCL tweaks to Google TV home rows
+com.tcl.interactive                    # TCL TIAS background service
+com.tcl.messagebox                     # TCL push messages and promos
+com.tcl.waterfall.overseas             # TCL recommendation browser

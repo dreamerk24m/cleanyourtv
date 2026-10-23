@@ -1,0 +1,6 @@
+# TCL 55C755 (Korea), G08_4K_GB, tcl9618, Google TV 14, UTT2.250416.001 AU02. Based on examples/tcl-c755-google-tv.
+# Apply: TV_HOST=<tv ip> tools/disable.sh mytv/batch-1.txt   Undo: TV_HOST=<tv ip> tools/restore.sh mytv/batch-1.txt com.google.android.apps.tv.launcherx
+# Batch 1: TCL tracking and analytics
+com.tcl.ttvs                           # Samba TV ACR, TCL BI analytics, Alexa core, T-Cast server, TCL firmware updater (owner chose off)
+com.tcl.logkit                         # log capture and upload
+com.tcl.usercenter                     # TCL account sign-in nags

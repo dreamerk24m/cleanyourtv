@@ -1,0 +1,5 @@
+# TCL 55C755 (Korea), G08_4K_GB, tcl9618, Google TV 14, UTT2.250416.001 AU02. Based on examples/tcl-c755-google-tv.
+# Apply: TV_HOST=<tv ip> tools/disable.sh mytv/batch-7.txt   Undo: TV_HOST=<tv ip> tools/restore.sh mytv/batch-7.txt com.google.android.apps.tv.launcherx
+# Batch 7: Google's ambient screensaver (promos). screensaver_components was switched to
+# com.gathin.tvhome/.ClockDream first; the old value is in mytv/README.md.
+com.google.android.apps.tv.dreamx
