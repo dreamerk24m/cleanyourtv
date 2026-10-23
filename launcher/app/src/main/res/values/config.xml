@@ -32,6 +32,7 @@
         <item>com.tcl.tv</item>
         <item>com.tcl.dashboard</item>
         <item>com.tcl.magiconnectfree</item>
+        <item>com.tcl.suspension</item>
     </string-array>
 
     <!-- The TV's Live TV / tuner app, offered at the end of the Inputs menu. Leave empty to omit. -->
@@ -279,6 +280,9 @@
     <!-- Optional Default-home tile; keep this key for existing themes and tile-ordering work.
          Off by default because the chooser is also available from launcher settings. -->
     <bool name="show_home_settings_shortcut">false</bool>
+    <!-- A Launcher settings tile at the end of the app grid, beside the Settings button's long-press menu
+         entry, which stays. config.xml only (no theme key). -->
+    <bool name="launcher_settings_tile">true</bool>
 
     <!-- Installed launchable apps, including ordinary Android apps. Also settable in config.json. -->
     <bool name="app_library">false</bool>
