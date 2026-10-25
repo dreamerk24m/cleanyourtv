@@ -1,3 +1,17 @@
+> **한국어 번역 포크입니다.**
+>
+> 이 저장소는 [Gathin23/cleanyourtv](https://github.com/Gathin23/cleanyourtv)의 포크입니다.
+> 런처의 **한국어 번역**(`launcher/app/src/main/res/values-ko/strings.xml`)을 추가했습니다. 모든 문자열을 한국어 번역가가 검토하고 다듬었으며, 원본 저장소에도 기여했습니다([#1565](https://github.com/Gathin23/cleanyourtv/pull/1565)).
+>
+> - **사용법**: TV의 시스템 언어가 한국어이면 런처가 자동으로 한국어로 표시됩니다. Android 13 이상에서는 런처만 한국어로 바꿀 수도 있습니다:\
+>   `tools/tv.py 'cmd locale set-app-locales com.gathin.tvhome --locales ko'`
+> - **설치와 사용 방법**: 아래 원문 README와 [PROMPT.md](PROMPT.md)에 따라 진행해 주세요.
+> - **최신 버전, 이슈, 다른 기여**: 원본 저장소를 이용해 주세요.
+>
+> 번역에 대한 의견이나 오타 제보는 이 저장소의 이슈로 남겨 주세요.
+
+---
+
 <p align="center">
   <a href="https://cleanyour.tv"><img src="https://raw.githubusercontent.com/Gathin23/cleanyourtv/main/docs/banner.png" alt="CleanYourTV. Your TV, minus the ads. Strip the bloatware from any Android TV or Google TV over Wi-Fi and replace the ad-filled home screen with a clean launcher that looks like an Apple TV. No root, no cable, nothing uninstalled, and a one-line restore." width="800"></a>
 </p>
